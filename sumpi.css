@@ -1,0 +1,148 @@
+body{
+    background-color: black;
+}
+.message{
+    border:2px solid pink;
+    width:60%;
+    margin:0 auto;
+    background-image: linear-gradient(to left,maroon,red,rgb(219, 98, 118),rgb(219, 98, 118),red,maroon);
+}
+h1{
+    color:aqua;
+    text-align:center;
+    font-family: 'Creepster', cursive;
+}
+h2{
+    color:palevioletred;
+    text-align:center;
+    font-family: 'Creepster', cursive;
+}
+h3{
+    color:aqua;
+    text-align:center;
+    font-family: 'Creepster', cursive;
+}
+p{
+    color:azure;
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+}
+
+.box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.album{
+    position: relative;
+    width:200px;
+    height:200px;
+    transform-style: preserve-3d;
+    animation:animate 30s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform:perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.album span{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform:rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);
+}
+
+.album span img{
+    position:absolute;
+    display:flex;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.main-container{
+   position:relative;
+   margin:0 auto;
+    width: 300px;
+    height: 285px;
+    padding:10px;
+}
+.card{
+    position: absolute;
+    width:100%;
+    height:100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in;
+   
+}
+
+.card:hover{
+    transform:rotateY(180deg);
+}
+
+.front{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    
+    backface-visibility: hidden;
+}
+
+.back{
+    position:absolute;
+   background-color: honeydew;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    font-family: 'Caveat', cursive;
+}
+
+.main{
+    border:2px dotted forestgreen;
+    margin:0 auto;
+    width:90%;
+    padding:10px;
+    background-color: rgb(238, 221, 223);
+}
+
+img{
+    padding:10px;
+    width: 250px;
+    height:200px;
+    
+}
+.button{
+    display:flex;
+    justify-content: center;
+}
+button{
+    color:fuchsia;
+    background-color: gold;
+}
+
+#images{
+    display:flex;
+    justify-content: center;
+}
+#cake{
+    width:fit-content;
+   height: 700px;
+}
+
